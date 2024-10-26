@@ -1,7 +1,7 @@
 ﻿using NServiceBus;
 
 namespace Contracts.Commands;
-public record CreateNewUserCommand(
+public record CreateNewUser(
     string EmailAddress,
     string Name)
     : ICommand;

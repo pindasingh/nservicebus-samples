@@ -18,7 +18,7 @@ public class Worker : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            await messageSession.SendLocal(new CreateNewUserCommand("bob@test.com", "Bob"));
+            await messageSession.SendLocal(new CreateNewUser("bob@test.com", "Bob"));
             await Task.Delay(1000, stoppingToken);
         }
     }

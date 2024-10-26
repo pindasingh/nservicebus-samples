@@ -4,16 +4,16 @@ using NServiceBus;
 using System.Threading.Tasks;
 
 namespace Endpoint;
-public class CreateNewUserCommandHandler : IHandleMessages<CreateNewUserCommand>
+public class CreateNewUserHandler : IHandleMessages<CreateNewUser>
 {
     private readonly ILogger _logger;
 
-    public CreateNewUserCommandHandler(ILogger<CreateNewUserCommandHandler> logger)
+    public CreateNewUserHandler(ILogger<CreateNewUserHandler> logger)
     {
         _logger = logger;
     }
 
-    public Task Handle(CreateNewUserCommand message, IMessageHandlerContext context)
+    public Task Handle(CreateNewUser message, IMessageHandlerContext context)
     {
         _logger.LogInformation($"Creating user {message.Name} with email {message.EmailAddress}");
         return Task.CompletedTask;
