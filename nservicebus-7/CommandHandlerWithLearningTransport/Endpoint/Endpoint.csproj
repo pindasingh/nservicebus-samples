@@ -1,9 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
-  <ItemGroup>
-	  <PackageReference Include="NServiceBus" Version="7.8.5" />
-	  <PackageReference Include="NServiceBus.Extensions.Hosting" Version="1.1.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Contracts\Contracts.csproj" />
-  </ItemGroup>
-</Project>
